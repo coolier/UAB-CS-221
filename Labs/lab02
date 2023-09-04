@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>
+  <body> 
+    <header>
+        <h1>Epic Company Name</h1>
+        <h2>This company does epic things</h2>  
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Footer</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>About</h2>
+        <p>
+            this company is interested in epic things such as:
+            <ul>
+                <li>x games</li>
+                <li>gambling</li>
+                <li>tax evasion</li>
+                <li>explosions</li>
+            </ul>
+        </p>
+    </section>
+    <section>
+        <h2>Projects</h2>
+        <p>
+            this company doesn't do projects but here is a link to a youtube channel we like: <a href="https://www.youtube.com/@Thebausffs">baus</a>
+        </p>
+    </section>
+    <section>
+        <h2>Contact</h2>
+        <p>We do not have an email but feel free to email Ryan Gosling's manager: <a href="mailto:peter.hess@caa.com">Peter Hess</a></p>
+    </section>
+    <footer><h2>Footer</h2>feel free to copy anything from this website :3 we do not know how to copyright things</footer>
+  </body>
+</html>
 
