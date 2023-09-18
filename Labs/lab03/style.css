@@ -1,4 +1,4 @@
-body header h1{
+body header h1 {
     font-family: Arial, Helvetica, sans-serif;
     background-color: lightblue;
     padding: 50px;
@@ -6,43 +6,43 @@ body header h1{
     font-style: italic;
     text-align: center;
 }
-body header h2{
+body header h2 {
     font-family: Arial, Helvetica, sans-serif;
     background-color: red;
     margin: 30px;
     font-weight: bold;
     text-align: center;
 }
-body header nav{
+body header nav {
     font-family: 'Times New Roman', Times, serif;
-    background-color: darkblue;
+    background-color: lightblue;
 }
-body section h2{
+body section h2 {
     font-family: Arial, Helvetica, sans-serif;
     background-color: red;
     margin: 30px;
     font-weight: bold;
     text-align: center;
 }
-body section p{
+body section p {
     font-family: 'Times New Roman', Times, serif;
     background-color: lightgray;
     font-size: 16px;
 }
-body footer h2{
+body footer h2 {
     font-family: Arial, Helvetica, sans-serif;
     background-color: red;
     margin: 30px;
     font-weight: bold;
     text-align: center;
 }
-body footer{
+body footer {
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
 }
-a{
+a {
     text-decoration: underline;
 }
-a:hover{
+a:hover {
     color: red;
 }
