@@ -1,0 +1,31 @@
+/* Reset default margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+header {
+    position: sticky; 
+    top: 0; /* Header at top */
+    background-color: #3438db; /* Unique color */
+    border-bottom: 1px solid #000; /* Bottom border */
+}
+  
+main {
+    width: 80%; 
+    margin: 0 auto; /* Center */
+    background-color: #e99c3c; /* Unique color */
+}
+  
+footer {
+    position: fixed;
+    bottom: 0; /* Footer at bottom */
+    width: 100vw; /* All viewport width */
+    background-color: #2ecd11; /* Unique color */
+}
+
+p {
+    padding: 1em; /* 1em padding <p> */
+}
+  
