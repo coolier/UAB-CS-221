@@ -1,0 +1,88 @@
+.header {
+    position: sticky; /* sticky header should remain at top of viewpoint, bonus */
+    top: 0;
+    padding: 20px;
+    margin: 20px;
+}
+
+.photo-grid {
+    display: grid; /* photo grid */
+    gap: 20px;
+}
+
+.grid-item {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    border: 1px solid lightsalmon;
+    position: relative;
+    overflow: hidden;
+    transition: transform 1s; 
+}
+
+.grid-item:nth-child(1) {
+    background-image: url('aquariumS.jpg'); /* all images from unsplash */
+}
+
+.grid-item:nth-child(2) {
+    background-image: url('reefA.jpg');
+}
+
+.grid-item:nth-child(3) {
+    background-image: url('JellyF.jpg');
+}
+
+.grid-item:nth-child(4) {
+    background-image: url('seahorseA.jpg');
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.grid-item:nth-child(odd) {
+    border-style: dashed;
+}
+
+.grid-item:hover:before{
+    position: absolute;  /* ::before hover element */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 90%; 
+    font-size: 2rem;
+    color: white;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    z-index: 1; 
+}
+
+.grid-item:hover:nth-child(1):before {
+    content: "Shark Exhibit";
+}
+
+.grid-item:hover:nth-child(2):before {
+    content: "Coral Reef Exhibit";
+}
+
+.grid-item:hover:nth-child(3):before {
+    content: "Jellyfish Exhibit";
+}
+
+.grid-item:hover:nth-child(4):before {
+    content: "Seahorse Exhibit";
+}
+
+.grid-item:hover:after {
+    content: "🔍";  /* after hover element */
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transition: opacity 0.2s;
+}
