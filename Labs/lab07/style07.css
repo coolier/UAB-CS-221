@@ -1,0 +1,104 @@
+/* changed all elements to class reference b/c i think it will work better with media queries */
+
+.header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0; 
+    padding: 0;
+}
+
+.nav-list li {
+    margin-right: 30px;
+    background-color: lightcoral;
+    border-radius: 3px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-list li:last-child {
+    margin-right: 0;
+}
+
+.header2 {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightcoral;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100px;
+}
+
+.paragraphB {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: lightblue;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+}
+
+.grid-about {
+    background-color: lightblue;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    text-align: center;
+    margin-left: auto;  /* fixed error in lab 05 where ul tag was not consistent with the other section, noticeable when you resize the page */
+    margin-right: auto; 
+    list-style: none;
+}
+
+.form1 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: lightblue;
+    max-width: 350px;
+    border-radius: 10px;
+}
+
+.footerP {
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: lightblue;
+    max-width: 820px;
+}
+
+a {
+    text-decoration: underline;
+    color: #33475b;
+}
+
+a:hover {
+    color: red;
+    background-color: cyan;
+}
+
+@media screen and (max-width: 480px) {
+    .header1 {
+        max-width: 400px;
+        font-size: 1.6rem;
+    }
+}
