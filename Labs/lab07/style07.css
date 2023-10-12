@@ -1,4 +1,11 @@
 /* changed all elements to class reference b/c i think it will work better with media queries */
+/* changed the font of headers as suggested in the lab */
+
+.photo {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .header1 {
     display: flex;
@@ -7,6 +14,7 @@
     background-color: lightblue;
     padding: 20px;
     border-radius: 10px;
+    font-family: Georgia;
 }
 
 .nav-list {
@@ -36,7 +44,8 @@
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 100px;
+    max-width: 110px;
+    font-family: Georgia;
 }
 
 .paragraphB {
@@ -96,9 +105,117 @@ a:hover {
     background-color: cyan;
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) { 
+
+    /* I was having issues with media queries so I got most of this from AI I 
+    input my code to the AI and asked it to "Add a media query to the end of 
+    this code to adjust layout and styling for a screen of 480px in width" 
+    I then copied it for the other two screen sizes */
+
     .header1 {
-        max-width: 400px;
-        font-size: 1.6rem;
+        flex-direction: column;
+        text-align: center;
     }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list li {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .header2 {
+        max-width: 100%;
+    }
+
+    .grid-about {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .paragraphB,
+    .form1 {
+        max-width: 100%;
+    }
+
+    .footerP {
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width: 768px) { 
+    
+    .header1 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list li {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .header2 {
+        max-width: 100%;
+    }
+
+    .grid-about {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .paragraphB,
+    .form1 {
+        max-width: 100%;
+    }
+
+    .footerP {
+        max-width: 100%;
+    }
+    
+}
+
+@media (max-width: 1024px) { 
+    .header1 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-list li {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .header2 {
+        max-width: 100%;
+    }
+
+    .grid-about {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .paragraphB,
+    .form1 {
+        max-width: 100%;
+    }
+
+    .footerP {
+        max-width: 100%;
+    }
+    
 }
