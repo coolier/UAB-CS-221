@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homework 8</title>
+    <link rel="stylesheet" href="cmingus.hw8.css">
+</head>
+<body>
+    <h1>Welcome to Homework 8</h1>
+    <p>This is a basic HTML page to practice JScript</p>
+    <script>
+
+        let grade = prompt("Please enter a numeric grade value:"); //prompt accept a value
+        grade = parseFloat(grade);
+        let letterGrade
+        let treat
+
+        if (!isNaN(grade)){ //bonus
+
+            if (grade >= 90) {
+                letterGrade = 'A';
+            } else if (grade >= 80) {
+                letterGrade = 'B';
+            } else if (grade >= 70) {
+                letterGrade = 'C';
+            } else if (grade >= 60) {
+                letterGrade = 'D';
+            } else {
+                letterGrade = 'F';
+            }
+
+            switch (letterGrade) {
+                case 'A':
+                    treat = 'Candy';
+                    break;
+                case 'B':
+                    treat = 'Apple';
+                    break;
+                case 'C':
+                    treat = 'Mint';
+                    break;
+                case 'D':
+                    treat = 'Pencil';
+                    break;
+                default:
+                    treat = 'Awkward conversation with parents';
+                    break;
+            }
+
+            console.log("Numeric Grade: " + grade);
+            console.log("Letter Grade: " + letterGrade);
+            console.log("Treat: " + treat);
+    }
+    else {
+        console.log("Please enter a numeric grade") //bonus
+    }
+
+    </script>
+</body>
+</html>
