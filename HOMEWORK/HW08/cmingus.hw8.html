@@ -9,14 +9,14 @@
     <p>This is a basic HTML page to practice JScript</p>
     <script>
 
-        let grade = prompt("Please enter a numeric grade value:"); //prompt accept a value
+        let grade = prompt("Please enter a numeric grade value:"); // prompt accept a value
         grade = parseFloat(grade);
         let letterGrade
         let treat
 
-        if (!isNaN(grade)){ //bonus
+        if (!isNaN(grade)){ // bonus
 
-            if (grade >= 90) {
+            if (grade >= 90) { // change grade num to string
                 letterGrade = 'A';
             } else if (grade >= 80) {
                 letterGrade = 'B';
@@ -28,7 +28,7 @@
                 letterGrade = 'F';
             }
 
-            switch (letterGrade) {
+            switch (letterGrade) { // change grade string to treat
                 case 'A':
                     treat = 'Candy';
                     break;
@@ -51,7 +51,7 @@
             console.log("Treat: " + treat);
     }
     else {
-        console.log("Please enter a numeric grade") //bonus
+        console.log("Please enter a numeric grade") // bonus
     }
 
     </script>
