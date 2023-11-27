@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bookshelf Manager</title>
+    <link rel="stylesheet" href="cmingus.lab11.css">
+</head>
+<body>
+    <header>
+        <h1>Bookshelf Manager</h1>
+    </header>
+    <main>
+        <section id="search-section">
+            <input type="text" id="search-input" placeholder="Search books by title or author">
+            <button id="search-button">Search</button>
+        </section>
+        <section id="book-list">
+            <h2>Your Book List</h2>
+            <!-- Books will be added here dynamically -->
+        </section>
+        <div id="book-detail-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2>Book Details</h2>
+                <!-- Book details will be displayed here -->
+            </div>
+        </div>
+        <section id="reading-list">
+            <h2>Your Reading List</h2>
+            <!-- Reading list items will be added here dynamically -->
+        </section>        
+    </main>
+    <script src="cmingus.lab11.js"></script>
+</body>
+</html>
