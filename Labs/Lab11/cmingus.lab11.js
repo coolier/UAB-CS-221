@@ -1,35 +1,55 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Load and display the saved reading list on page load
+
+    // displays the reading list on page load
     displayReadingList();
 
+    // adds event listener to the search button
     document.getElementById('search-button').addEventListener('click', function() {
+
         var searchText = document.getElementById('search-input').value;
+
         if (!searchText) {
+
             alert("Please enter a search query.");
             return;
+
         }
         
+        // fetches book data from Google Books API
         fetch(`https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(searchText)}`)
             .then(response => {
+
                 if (!response.ok) {
+
                     throw new Error('Network response was not ok');
+
                 }
+
                 return response.json();
+
             })
             .then(data => displayBooks(data))
             .catch(error => {
+
                 console.error('There has been a problem with your fetch operation:', error);
                 alert("Failed to fetch book data. Please try again.");
+
             });
+
     });
+
 });
 
+//function to display books
 function displayBooks(data) {
+
     const bookList = document.getElementById('book-list');
-    bookList.innerHTML = ''; // Clear previous results
+    bookList.innerHTML = ''; // clear previous results
 
     if (data.items && data.items.length > 0) {
+
         data.items.forEach(book => {
+
             const listItem = document.createElement('div');
             listItem.className = 'book-item';
             listItem.innerHTML = `
@@ -45,33 +65,50 @@ function displayBooks(data) {
             bookList.appendChild(listItem);
 
             listItem.querySelector('.details-button').addEventListener('click', function() {
+
                 toggleBookDetails(listItem);
+
             });
 
             listItem.querySelector('.add-to-list-button').addEventListener('click', function() {
+
                 addToReadingList(book);
+
             });
+
         });
+
     } else {
+
         bookList.innerHTML = '<p>No books found. Try another search.</p>';
+
     }
+
 }
 
 function addToReadingList(book) {
+
     let readingList = JSON.parse(localStorage.getItem('readingList')) || [];
+
     if (!readingList.some(b => b.id === book.id)) {
+
         readingList.push(book);
         localStorage.setItem('readingList', JSON.stringify(readingList));
         displayReadingList();
+
     }
+
 }
 
 function displayReadingList() {
+
     const readingListSection = document.getElementById('reading-list');
     readingListSection.innerHTML = '';
 
     let readingList = JSON.parse(localStorage.getItem('readingList')) || [];
+
     readingList.forEach(book => {
+
         const listItem = document.createElement('div');
         listItem.className = 'book-item';
         listItem.innerHTML = `
@@ -87,29 +124,44 @@ function displayReadingList() {
         readingListSection.appendChild(listItem);
 
         listItem.querySelector('.details-button').addEventListener('click', function() {
+
             toggleBookDetails(listItem);
+
         });
 
         listItem.querySelector('.remove-from-list-button').addEventListener('click', function() {
+
             removeFromReadingList(book, listItem);
+
         });
+
     });
+
 }
 
 function removeFromReadingList(bookToRemove, listItem) {
+    
     let readingList = JSON.parse(localStorage.getItem('readingList')) || [];
     readingList = readingList.filter(book => book.id !== bookToRemove.id);
     localStorage.setItem('readingList', JSON.stringify(readingList));
     listItem.remove();
+
 }
 
 function toggleBookDetails(listItem) {
+
     const detailsDiv = listItem.querySelector('.book-details');
+
     if (detailsDiv.style.display === 'none') {
+
         detailsDiv.style.display = 'block';
         listItem.querySelector('.details-button').textContent = 'Hide Details';
+
     } else {
+
         detailsDiv.style.display = 'none';
         listItem.querySelector('.details-button').textContent = 'Details';
+
     }
+
 }
